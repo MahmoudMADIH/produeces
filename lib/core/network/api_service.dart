@@ -11,7 +11,11 @@ class ApiService {
     return response;
   }
 
-  Future<http.Response> post(String endpoint, Map<String, dynamic> data, {Map<String, String>? headers}) async {
+  Future<http.Response> post(
+    String endpoint,
+    Map<String, dynamic> data, {
+    Map<String, String>? headers,
+  }) async {
     final response = await http.post(
       Uri.parse('$baseUrl$endpoint'),
       headers: headers ?? {'Content-Type': 'application/json'},
