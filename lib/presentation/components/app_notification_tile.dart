@@ -23,8 +23,8 @@ class AppNotificationTile extends StatelessWidget {
         backgroundColor: color.withOpacity(0.2),
         child: Icon(icon, color: color),
       ),
-      title: Text(title, style: Theme.of(context).textTheme.bodyText1),
-      subtitle: Text(subtitle, style: Theme.of(context).textTheme.bodyText2),
+      title: Text(title, style: Theme.of(context).textTheme.titleMedium),
+      subtitle: Text(subtitle, style: Theme.of(context).textTheme.bodyMedium),
       onTap: onTap,
     );
   }

@@ -26,9 +26,9 @@ class AppMessageTile extends StatelessWidget {
           color: isOfficialReply ? Colors.black : Colors.grey,
         ),
       ),
-      title: Text(sender, style: Theme.of(context).textTheme.bodyText1),
-      subtitle: Text(message, style: Theme.of(context).textTheme.bodyText2),
-      trailing: Text(time, style: Theme.of(context).textTheme.caption),
+      title: Text(sender, style: Theme.of(context).textTheme.titleMedium),
+      subtitle: Text(message, style: Theme.of(context).textTheme.bodyMedium),
+      trailing: Text(time, style: Theme.of(context).textTheme.labelSmall),
       onTap: onTap,
     );
   }

@@ -33,12 +33,12 @@ class AppAudioPlayer extends StatelessWidget {
         const SizedBox(height: 24),
         Text(
           title,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
           textAlign: TextAlign.center,
         ),
         Text(
           subtitle,
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.titleMedium,
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 16),
