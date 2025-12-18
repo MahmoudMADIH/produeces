@@ -7,6 +7,8 @@ class ProgramsRemoteDataSource {
   Future<List<dynamic>> fetchPrograms() async {
     final response = await apiService.get('/programs');
     // Parse and return program list
-    return response.body.isNotEmpty ? List<dynamic>.from(jsonDecode(response.body)) : [];
+    return response.body.isNotEmpty
+        ? List<dynamic>.from(jsonDecode(response.body))
+        : [];
   }
 }
