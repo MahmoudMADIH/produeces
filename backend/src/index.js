@@ -11,11 +11,21 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan('dev'));
 
+
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Quran Radio backend is running.' });
 });
 
-// TODO: Add routes for auth, users, programs, messages, notifications, analytics
+// Auth routes
+// Auth routes
+const authRoutes = require('./routes/auth');
+app.use('/api/auth', authRoutes);
+
+// User routes
+const userRoutes = require('./routes/users');
+app.use('/api/users', userRoutes);
+
+// TODO: Add routes for users, programs, messages, notifications, analytics
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
